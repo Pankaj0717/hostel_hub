@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HostelHub - Find Your Perfect Stay</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">HostelHub</div>
+      <div class="nav-links">
+        <button class="login-btn">Login</button>
+        <button class="register-btn primary">Register</button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Auth Modal -->
+      <div class="modal" id="authModal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          
+          <!-- Login Form -->
+          <form id="loginForm" class="auth-form">
+            <h2>Login</h2>
+            <div class="user-type-toggle">
+              <button type="button" class="active" data-type="student">Student</button>
+              <button type="button" data-type="owner">Hostel Owner</button>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="primary">Login</button>
+            <p class="form-footer">
+              <a href="#" class="forgot-password">Forgot Password?</a>
+              <a href="#" class="switch-form" data-form="register">Create Account</a>
+            </p>
+          </form>
+
+          <!-- Registration Form -->
+          <form id="registerForm" class="auth-form hidden">
+            <h2>Register</h2>
+            <div class="user-type-toggle">
+              <button type="button" class="active" data-type="student">Student</button>
+              <button type="button" data-type="owner">Hostel Owner</button>
+            </div>
+            <div class="form-group">
+              <input type="text" name="fullName" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+              <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <div class="form-group owner-fields hidden">
+              <input type="text" name="hostelName" placeholder="Hostel Name">
+              <input type="tel" name="contactNumber" placeholder="Contact Number">
+            </div>
+            <div class="form-group">
+              <label class="checkbox">
+                <input type="checkbox" required>
+                I agree to the Terms and Conditions
+              </label>
+            </div>
+            <button type="submit" class="primary">Register</button>
+            <p class="form-footer">
+              <a href="#" class="switch-form" data-form="login">Already have an account?</a>
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>Find Your Perfect Hostel Today</h1>
+        <div class="search-bar">
+          <input type="text" placeholder="Enter location">
+          <button class="primary">Search</button>
+        </div>
+      </section>
+
+      <!-- Featured Hostels -->
+      <section class="featured-hostels">
+        <h2>Featured Hostels</h2>
+        <div class="hostel-grid">
+          <!-- Hostel cards will be dynamically added here -->
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
