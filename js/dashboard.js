@@ -30,7 +30,7 @@ function showOwnerDashboard(container, user) {
           <input type="text" name="location" placeholder="Location" required>
         </div>
         <div class="form-group">
-          <input type="number" name="price" placeholder="Price per night" required>
+          <input type="number" name="price" placeholder="Price" required>
         </div>
         <div class="form-group">
           <textarea name="description" placeholder="Description" required></textarea>
@@ -120,7 +120,7 @@ function displayHostels(hostels, isOwner = false) {
     <div class="hostel-card">
       <h3>${hostel.name}</h3>
       <p class="location">${hostel.location}</p>
-      <p class="price">₹${hostel.price} per night</p>
+      <p class="price">₹${hostel.price}</p>
       <p class="description">${hostel.description}</p>
       ${isOwner 
         ? `<button class="delete-hostel" data-id="${hostel.id}">Delete</button>`
